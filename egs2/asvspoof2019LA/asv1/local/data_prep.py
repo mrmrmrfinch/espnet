@@ -50,13 +50,13 @@ def generate_data(fileText, dataDir):
             attackType = line[3] # e.g. A01, A03, etc.
         else:
             label = 0
-            attackType = "NA" # Since it's bonafide.
+            attackType = "-" # Since it's bonafide.
             
         # TODO: attackType need to be incorporated into the text file.
         
         # Text is in the format of "utt_id transcription".
         # Here, transcription is the label (0 or 1).
-        text.append("{} {}".format(utteranceID, label))
+        text.append("{} {} {}".format(utteranceID, label, attackType))
         
         # utt2spk is in the format of "utt_id speaker_id".
         utt2spk.append("{} {}".format(utteranceID, speakerID))

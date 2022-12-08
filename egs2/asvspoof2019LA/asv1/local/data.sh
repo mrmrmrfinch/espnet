@@ -54,7 +54,6 @@ if [ ${stage} -le 1 ] && [ ${stop_stage} -ge 1 ]; then
     
     if hash unzip 2>/dev/null; then
         log "System has unzip installed. Using unzip..."
-        sleep 0.5
         unzip -qq LA.zip -d ${ASVSPOOF2019LA}
     else
         log "System has no unzip installed. Aborting. Please unzip the dataset manually."
